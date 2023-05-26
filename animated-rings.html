@@ -1,0 +1,67 @@
+<div class="impact-animation">
+    <div class="ring ring-outer">
+        <img src="ring-outer.svg">
+    </div>
+    <div class="ring ring-inner">
+        <img src="ring-inner.svg">
+    </div>
+</div>
+
+<style>
+    .impact-animation{
+        position: relative;
+        width: 976px;
+        height: 976px;
+    }
+
+    .ring{
+        animation-duration: 16000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .ring img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .ring-outer{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        animation-name: spin-cw;
+    }
+
+    .ring-inner{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 62.5%;
+        height: 62.5%;
+        animation-name: spin-ccw;
+    }
+
+    @keyframes spin-cw {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
+    }
+
+    @keyframes spin-ccw {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(-360deg);
+        }
+    }
+</style>
